@@ -29,7 +29,7 @@ class getAllSE extends Component {
     var cn=[];
     let xx=new Map();
     var z = JSON.stringify(this.state.data);
-    console.log(cn);
+    console.log(xx);
    // this.state.data.map();
     
         
@@ -38,7 +38,7 @@ class getAllSE extends Component {
         <div align="center">
         
           {
-            cn.map(x=>(<p>{x}</p>))
+            xx.map(x=>(<p>{x}</p>))
           }
         
         
