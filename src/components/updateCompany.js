@@ -107,7 +107,7 @@ import axios from 'axios';
         };
         console.log(myInit1+"body")
         alert("Company created successfully");
-        let finalurl = 'http://127.0.0.1:8080/companies/add';
+        let finalurl = 'https://glacial-brook-60163.herokuapp.com/companies/add';
         fetch(finalurl, myInit1)
           .then((response) => 
           {
@@ -138,7 +138,7 @@ import axios from 'axios';
   
       const myInit1 = { method: "GET"  };
            
-      let finalurl = "http://127.0.0.1:8080/stockExchange/";
+      let finalurl = "https://glacial-brook-60163.herokuapp.com/stockExchange/";
       
       fetch(finalurl, myInit1)
         .then((response) => {
@@ -335,7 +335,7 @@ import axios from 'axios';
 //     }
 //      getSE()
 //         {
-//             fetch('http://localhost:8080/stockExchange/').then(response => response.json())
+//             fetch('https://glacial-brook-60163.herokuapp.com/stockExchange/').then(response => response.json())
 //             .then((jsonData) => {
 //               // jsonData is parsed json object received from url
 //               this.sen=jsonData.map(function(item)
