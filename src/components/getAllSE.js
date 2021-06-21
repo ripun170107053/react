@@ -29,7 +29,7 @@ class getAllSE extends Component {
     var cn=[];
     let xx=new Map();
     var z = JSON.stringify(this.state.data);
-    console.log(z);
+    console.log(cn);
    // this.state.data.map();
     
         
