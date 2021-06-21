@@ -64,7 +64,7 @@ class App extends Component
                 Manage Companies
               </DropdownToggle>
               <DropdownMenu top >
-                <DropdownItem > <a href="http://localhost:8080/companies/" target="_blank" >View All Companies</a> </DropdownItem>
+                <DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>
                 <DropdownItem ><Link to="/createCompany" > Add a new Company </Link></DropdownItem>
                 <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem>
                 <DropdownItem ><Link to="/viewAllCompany" > View All </Link></DropdownItem>

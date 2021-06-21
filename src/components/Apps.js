@@ -17,7 +17,7 @@ class Apps extends Component {
     'mode':'no-cors'},
 
 }
-    fetch('http://localhost:8080/companies/',
+    fetch('https://glacial-brook-60163.herokuapp.com/companies/',
     myInit1).then(response => response.json())
       // and update the state data to said json
       .then(data => this.setState({ data }));

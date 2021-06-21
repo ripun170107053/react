@@ -75,7 +75,7 @@ else if  (e.target.name === "userType"){
 
 	};
    
-    let finalurl = 'http://127.0.0.1:8080/setuserapi?username='+this.state.name+'&password='
+    let finalurl = 'https://glacial-brook-60163.herokuapp.com/setuserapi?username='+this.state.name+'&password='
     +this.state.password+'&email='+this.state.email+'&userType='+this.state.userType+'&confirmed='
     +this.state.confirmed+'&mobile='+this.state.mobile+'';
     
@@ -118,7 +118,7 @@ else if  (e.target.name === "userType"){
       this.setState({ confirmed: '' });
       this.setState({ mobile: '' });
       alert("User created successfully");
-      let finalurl = 'http://127.0.0.1:8080/setuserapi2';
+      let finalurl = 'https://glacial-brook-60163.herokuapp.com/setuserapi2';
       fetch(finalurl, myInit1)
         .then((response) => 
         {
@@ -139,7 +139,7 @@ else if  (e.target.name === "userType"){
 
     const myInit1 = { method: "GET" };
          
-    let finalurl = "http://127.0.0.1:8080/companies/findById/1";
+    let finalurl = "https://glacial-brook-60163.herokuapp.com/companies/findById/1";
     //////
     fetch(finalurl, myInit1)
       .then((response) => {

@@ -6,7 +6,7 @@ class UploadFilesService {
 
     formData.append("file", file);
 
-    return http.post("http://localhost:8080/excel/uploadExcel", formData, {
+    return http.post("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel", formData, {
       headers: {
         "mode":"no-cors",
         "Content-Type": "multipart/form-data",
