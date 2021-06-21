@@ -28,17 +28,31 @@ class getAllSE extends Component {
   {
     var cn=[];
     let xx=new Map();
-    var z = JSON.stringify(this.state.data);
-    console.log(xx);
-   // this.state.data.map();
     
+    this.state.data.map(function(company)
+          {
+            xx.set(company.stockExchange,":");
+            //cn.push(company.companyName);
+          })
+      this.state.data.map(function(company)
+          {
+            xx.set(company.stockExchange,xx.get(company.stockExchange)+" "+company.brief);
+            //cn.push(company.companyName);
+          })
+        
+        for(let [key,value] of xx)
+        {
+          cn.push(key+value);
+
+        }
+        
         
     //console.log(cn);
     return (
         <div align="center">
         
-          {
-            xx.map(x=>(<p>{x}</p>))
+        {
+            cn.map(x=>(<p>{x}</p>))
           }
         
         
