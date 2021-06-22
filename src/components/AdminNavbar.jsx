@@ -6,9 +6,9 @@ import getAllSE from './getAllSE';
 import UserLandingPage from './UserLandingPage';
 import UploadFiles from './upload-files.component';
 // import updateCompany from "./components/updateCompany";
-import createNewUser from './components/createNewUser';
+import createNewUser from './createNewUser';
 
-import CreateCompany from "./components/createCompany";
+import CreateCompany from "./createCompany";
 import Apps from "./components/Apps";
 import {
     Collapse,
