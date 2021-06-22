@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import AdminNavbar from './components/AdminNavbar';
-import UserNavbar from './components/UserNavabar';
+import UserNavbar from './components/UserNavbar';
 
 function App() {
   
