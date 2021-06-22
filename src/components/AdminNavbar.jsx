@@ -5,7 +5,7 @@ import CC from './CC';
 import getAllSE from './getAllSE';
 import UserLandingPage from './UserLandingPage';
 import UploadFiles from './upload-files.component';
-import updateCompany from "./components/updateCompany";
+// import updateCompany from "./components/updateCompany";
 import createNewUser from './components/createNewUser';
 
 import CreateCompany from "./components/createCompany";
@@ -49,7 +49,7 @@ const AdminNavbar=()=>
               <DropdownMenu top >
                 <DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>
                 <DropdownItem ><Link to="/createCompany" > Add a new Company </Link></DropdownItem>
-                <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem>
+                {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
                 <DropdownItem ><Link to="/viewAllCompany" > View All </Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -60,7 +60,7 @@ const AdminNavbar=()=>
         <Route exact path="/uploadExcel" component={UploadFiles} />
         <Route exact path="/createNewUser" component={createNewUser} />
         <Route exact path="/createCompany" component={CreateCompany} />
-        <Route exact path="/updateCompany" component={updateCompany} />
+        {/* <Route exact path="/updateCompany" component={updateCompany} /> */}
         <Route exact path="/viewAllCompany" component={Apps}/>
         <Route exact path="/listStockExchanges" component={getAllSE}/>
         {/* <Route exact path="/companies" component={CreateCompany} /> */}
