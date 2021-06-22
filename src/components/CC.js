@@ -48,12 +48,12 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       //console.log(k);
       if(k=='Amazon')
       {
-        console.log('1st method');
+        //console.log('1st method');
         for(var zz=0;zz<obj[k].length;zz++)
         {
           chartData.push({
-            label:zz,
-            value:obj[k][zz]
+            label:zz.toString(),
+            value:obj[k][zz].toString()
 
         });
         }
@@ -66,40 +66,41 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
 
   });
 console.log(chartData);
-// var chartData = [
-//   {
-//     label: "Venezuela",
-//     value: "290"
-//   },
-//   {
-//     label: "Saudi",
-//     value: "260"
-//   },
-//   {
-//     label: "Canada",
-//     value: "180"
-//   },
-//   {
-//     label: "Iran",
-//     value: "140"
-//   },
-//   {
-//     label: "Russia",
-//     value: "115"
-//   },
-//   {
-//     label: "UAE",
-//     value: "100"
-//   },
-//   {
-//     label: "US",
-//     value: "30"
-//   },
-//   {
-//     label: "China",
-//     value: "30"
-//   }
-// ];
+var chartData2 = [
+  {
+    label: "Venezuela",
+    value: "290"
+  },
+  {
+    label: "Saudi",
+    value: "260"
+  },
+  {
+    label: "Canada",
+    value: "180"
+  },
+  {
+    label: "Iran",
+    value: "140"
+  },
+  {
+    label: "Russia",
+    value: "115"
+  },
+  {
+    label: "UAE",
+    value: "100"
+  },
+  {
+    label: "US",
+    value: "30"
+  },
+  {
+    label: "China",
+    value: "30"
+  }
+];
+console.log(chartData2);
 // Create a JSON object to store the chart configurations
 var chartConfigs = {
   type: "column2d", // The chart type
