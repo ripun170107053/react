@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CC from './CC';
 import getAllSE from './getAllSE';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     Collapse,
     Navbar,
@@ -31,10 +32,11 @@ const UserNavbar=()=>
             <li className="nav-item">
               <Link to="/listStockExchanges">List Stock Exchanges</Link>
             </li>
+            <p></p>
             <li className="nav-item">
               <Link to="/companyComparison">Compare Companies</Link>
             </li>
-            
+            <p></p>
           </ul>
         </nav>
         

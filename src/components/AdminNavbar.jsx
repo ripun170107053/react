@@ -7,7 +7,7 @@ import UserLandingPage from './UserLandingPage';
 import UploadFiles from './upload-files.component';
 // import updateCompany from "./components/updateCompany";
 import createNewUser from './createNewUser';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import CreateCompany from "./createCompany";
 import Apps from "./Apps";
 import {
@@ -33,15 +33,19 @@ const AdminNavbar=()=>
             <li className="nav-item">
               <Link to="/createNewUser">Home</Link>
             </li>
+            <p></p>
             <li className="nav-item">
               <Link to="/uploadExcel">Import Data</Link>
             </li>
+            <p></p>
             <li className="nav-item">
               <Link to="/listStockExchanges">List Stock Exchanges</Link>
             </li>
+            <p></p>
             <li className="nav-item">
               <Link to="/companyComparison">Compare Companies</Link>
             </li>
+            <p></p>
             <UncontrolledDropdown>
               <DropdownToggle>
                 Manage Companies
