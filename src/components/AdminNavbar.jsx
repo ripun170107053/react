@@ -31,9 +31,11 @@ const AdminNavbar=()=>
          <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/createNewUser">Home</Link>
+              <Link to="/createNewUser">Create New User</Link>
             </li>
-            <p></p>
+            <p>
+
+            </p>
             <li className="nav-item">
               <Link to="/uploadExcel">Import Data</Link>
             </li>

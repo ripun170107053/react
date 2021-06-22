@@ -30,43 +30,49 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
      //chartConfigs.data=response;
      var r1=response;
      var res=JSON.stringify(response);
-    // let m=new Map();
-    // console.log(typeof r1);
-     //console.log(typeof res);
-     //console.log(res);
-    //  for(var x in res)
-    //  {
-    //    m.set(x,res[x])
-      
-    //  }
-    //  console.log(m);
-    // return "";
+    
     const obj= JSON.parse(res);
     var ix=0;
     //chartData=[];
-    for(var k in obj)
-    {
-      //console.log(k);
-      if(k=='Amazon')
+      for(var k in obj)
       {
-        //console.log('1st method');
-        for(var zz=0;zz<obj[k].length;zz++)
-        {
-          chartData.push({
-            label:zz.toString(),
-            value:obj[k][zz].toString()
+        //console.log(k);
+        // if(k=='Amazon')
+        // {
+        //   //console.log('1st method');
+        //   for(var zz=0;zz<obj[k].length;zz++)
+        //   {
+        //     chartData.push({
+        //       label:zz.toString(),
+        //       value:obj[k][zz].toString()
 
-        });
-        }
+        //   });
+        //   }
+          
+        // }
+        chartData.push({
+          "seriesname": k.toString(),
+          "data":[]
+        })
         
       }
-      
+      for(var k in obj)
+      {
+        //console.log(k);
+        // if(k=='Amazon')
+        // {
+        //   //console.log('1st method');
+          for(var zz=0;zz<obj[k].length;zz++)
+          {
+            chartData[k.toString()].push({
+              "value":obj[k][zz].toString()
+
+          });
+        
+      }
     }
-
-
-
   });
-//console.log(chartData);
+console.log(chartData);
 var chartData2 = [
   {
     label: "Venezuela",
@@ -106,7 +112,7 @@ var chartData2 = [
 // console.log(typeof chartData2);
 // Create a JSON object to store the chart configurations
 const chartConfigs = {
-  type: "line", // The chart type
+  type: "msline", // The chart type
   width: "700", // Width of the chart
   height: "400", // Height of the chart
   dataFormat: "json", // Data type
@@ -126,25 +132,7 @@ const chartConfigs = {
     data: chartData
   }
 };
-// const chartConfigs2 = {
-//   type: "column2d", // The chart type
-//   width: "700", // Width of the chart
-//   height: "400", // Height of the chart
-//   dataFormat: "json", // Data type
-//   dataSource: {
-//     // Chart Configuration
-//     chart: {
-//       caption: "Stock Prices Data",    //Set the chart caption
-//       subCaption: "",             //Set the chart subcaption
-//       xAxisName: "Time",           //Set the x-axis name
-//       yAxisName: "USD",  //Set the y-axis name
-//       numberSuffix: "K",
-//       theme: "fusion"                 //Set the theme for your chart
-//     },
-//     // Chart Data - from step 2
-//     data: chartData2
-//   }
-// };
+
 class CC extends React.Component 
 {
   constructor()

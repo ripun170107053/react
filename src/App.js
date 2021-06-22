@@ -19,6 +19,7 @@ class App extends Component
   render()
   {
     return (
+     
       <Router>
       <div className="wrapper">
         <h1>Stock Market App</h1>
