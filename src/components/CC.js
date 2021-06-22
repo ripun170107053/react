@@ -16,7 +16,7 @@ import axios from 'axios';
 // Step 6 - Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 // Preparing the chart data
-var chartData
+var chartData=[];
 fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       method: 'get',
       dataType: 'json',
@@ -42,10 +42,38 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
     //  console.log(m);
     // return "";
     const obj= JSON.parse(res);
+    var ix=0;
     for(var k in obj)
     {
-      console.log(k);
+      //console.log(k);
+      if(k=='Amazon')
+      {
+        console.log('1st method');
+        for(var zz=0;zz<obj[k].length;zz++)
+        {
+          chartData.push({
+            label:zz,
+            value:obj[k][zz]
+
+        });
+        }
+        
+      }
+      if(k=="Amazon")
+      {
+        console.log('2nd method');
+        for(var zz=0;zz<obj[k].length;zz++)
+        {
+          chartData.push({
+            label:zz,
+            value:obj[k][zz]
+
+        });
+        }
+      }
     }
+
+
 
   });
 
