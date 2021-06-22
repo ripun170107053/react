@@ -52,7 +52,7 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
         // }
         chartData.push({
           "seriesname": k.toString(),
-          "data":"",
+          "data":"emp",
         })
         
       }
@@ -62,6 +62,7 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
         // if(k=='Amazon')
         // {
         //   //console.log('1st method');
+          
           for(var zz=0;zz<obj[k].length;zz++)
           {
             // chartData[k.toString()].push(
@@ -69,7 +70,23 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
             //   "value":obj[k][zz].toString()
 
             //   }
-            chartData[k.toString()]=k.toString();
+            if(chartData[k.toString()]=="em")
+            {
+              chartData[k.toString()]=[];
+              chartData[k.toString()].push({
+                   "value":obj[k][zz].toString()
+    
+                   })
+
+            }
+            else
+            {
+              chartData[k.toString()].push({
+                "value":obj[k][zz].toString()
+ 
+                })
+            }
+            
           
             // );
         
@@ -172,7 +189,7 @@ class CC extends React.Component
   return (
     <div>
     <ReactFC {...chartConfigs} />
-    {console.log(chartData)}
+    
     
     {/* <ReactFC {...chartConfigs2} /> */}
     </div>
