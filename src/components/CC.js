@@ -65,7 +65,7 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
 
 
   });
-console.log(chartData);
+//console.log(chartData);
 var chartData2 = [
   {
     label: "Venezuela",
@@ -100,9 +100,11 @@ var chartData2 = [
     value: "30"
   }
 ];
-console.log(chartData2);
+// console.log(chartData2);
+// console.log(typeof chartData);
+// console.log(typeof chartData2);
 // Create a JSON object to store the chart configurations
-var chartConfigs = {
+const chartConfigs = {
   type: "column2d", // The chart type
   width: "700", // Width of the chart
   height: "400", // Height of the chart
@@ -119,6 +121,25 @@ var chartConfigs = {
     },
     // Chart Data - from step 2
     data: chartData
+  }
+};
+const chartConfigs2 = {
+  type: "column2d", // The chart type
+  width: "700", // Width of the chart
+  height: "400", // Height of the chart
+  dataFormat: "json", // Data type
+  dataSource: {
+    // Chart Configuration
+    chart: {
+      caption: "Stock Prices Data",    //Set the chart caption
+      subCaption: "",             //Set the chart subcaption
+      xAxisName: "Time",           //Set the x-axis name
+      yAxisName: "USD",  //Set the y-axis name
+      numberSuffix: "K",
+      theme: "fusion"                 //Set the theme for your chart
+    },
+    // Chart Data - from step 2
+    data: chartData2
   }
 };
 class CC extends React.Component 
@@ -152,7 +173,14 @@ class CC extends React.Component
   {
     //console.log("xyz");
     
-  return (<ReactFC {...chartConfigs} />);
+  return (
+    <div>
+    <ReactFC {...chartConfigs} />
+    <p>hey</p>
+    <ReactFC {...chartConfigs2} />
+    </div>
+  
+  );
  }
 }
 export default CC;
