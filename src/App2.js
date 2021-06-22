@@ -2,17 +2,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-// import UserNavbar from './components/Navbars/UserNavbar';
-// import AdminNavbar from "./components/Navbars/AdminNavbar";
+
  import CreateCompany from "./components/createCompany";
-// import Companies from './components/companyComponents/allCompanies';
+
 import UserLandingPage from "./components/UserLandingPage.js";
-// import AdminLandingPage from './components/users/AdminLandingPage';
+
 import UploadFiles from "./components/upload-files.component";
-// import Signup from './components/forms/Signup';
-// import Exchanges from './components/companyComponents/allExchanges';
-// import AddStockExchange from './components/forms/AddStockExchange';
-// import AddNewIPO from './components/forms/AddNewIPO';
+
 import Apps from "./components/Apps";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import updateCompany from "./components/updateCompany";

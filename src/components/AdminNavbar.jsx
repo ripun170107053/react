@@ -7,7 +7,7 @@ import UserLandingPage from './UserLandingPage';
 import UploadFiles from './upload-files.component';
 import updateCompany from "./components/updateCompany";
 import createNewUser from './components/createNewUser';
-import getAllSE from './components/getAllSE';
+
 import CreateCompany from "./components/createCompany";
 import Apps from "./components/Apps";
 import {
