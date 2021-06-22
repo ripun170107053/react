@@ -59,24 +59,13 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
         }
         
       }
-      if(k=="Amazon")
-      {
-        console.log('2nd method');
-        for(var zz=0;zz<obj[k].length;zz++)
-        {
-          chartData.push({
-            label:zz,
-            value:obj[k][zz]
-
-        });
-        }
-      }
+      
     }
 
 
 
   });
-
+console.log(chartData);
 // var chartData = [
 //   {
 //     label: "Venezuela",
