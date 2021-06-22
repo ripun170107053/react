@@ -9,7 +9,7 @@ import UploadFiles from './upload-files.component';
 import createNewUser from './createNewUser';
 
 import CreateCompany from "./createCompany";
-import Apps from "./components/Apps";
+import Apps from "./Apps";
 import {
     Collapse,
     Navbar,
