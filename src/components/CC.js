@@ -28,7 +28,8 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       {
 
      //chartConfigs.data=response;
-    console.log(response)
+     rez= JSON.stringify(response);
+    console.log(rez)
     //chartData = response;
 
   });
