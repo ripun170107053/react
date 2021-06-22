@@ -52,7 +52,7 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
         // }
         chartData.push({
           "seriesname": k.toString(),
-          "data":5
+          "data":"",
         })
         
       }
@@ -69,7 +69,7 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
             //   "value":obj[k][zz].toString()
 
             //   }
-            chartData[k.toString()]=4;
+            chartData[k.toString()]=k.toString();
           
             // );
         
