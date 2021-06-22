@@ -2,12 +2,10 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import Dashboard from '../Dashboard/Dashboard';
-import Login from '../Login/Login';
-import Preferences from '../Preferences/Preferences';
+
 import AdminNavbar from './components/AdminNavbar';
 import UserNavbar from './components/UserNavabar';
-import App2 from './App2';
+
 function App() {
   
   return (
