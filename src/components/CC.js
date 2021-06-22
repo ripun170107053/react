@@ -16,54 +16,57 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 // Step 6 - Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 // Preparing the chart data
-// fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
-//       method: 'get',
-//       dataType: 'json',
-//       headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json'
-//       }
-//     }).then(response => response.json()).then(response => 
-//       {
+var chartData
+fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
+      method: 'get',
+      dataType: 'json',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(response => response.json()).then(response => 
+      {
 
-//      //chartConfigs.data=response;
-//     console.log(response)
+     //chartConfigs.data=response;
+    console.log(response)
+    chartData = response;
 
-//   });
-var chartData = [
-  {
-    label: "Venezuela",
-    value: "290"
-  },
-  {
-    label: "Saudi",
-    value: "260"
-  },
-  {
-    label: "Canada",
-    value: "180"
-  },
-  {
-    label: "Iran",
-    value: "140"
-  },
-  {
-    label: "Russia",
-    value: "115"
-  },
-  {
-    label: "UAE",
-    value: "100"
-  },
-  {
-    label: "US",
-    value: "30"
-  },
-  {
-    label: "China",
-    value: "30"
-  }
-];
+  });
+
+// var chartData = [
+//   {
+//     label: "Venezuela",
+//     value: "290"
+//   },
+//   {
+//     label: "Saudi",
+//     value: "260"
+//   },
+//   {
+//     label: "Canada",
+//     value: "180"
+//   },
+//   {
+//     label: "Iran",
+//     value: "140"
+//   },
+//   {
+//     label: "Russia",
+//     value: "115"
+//   },
+//   {
+//     label: "UAE",
+//     value: "100"
+//   },
+//   {
+//     label: "US",
+//     value: "30"
+//   },
+//   {
+//     label: "China",
+//     value: "30"
+//   }
+// ];
 // Create a JSON object to store the chart configurations
 var chartConfigs = {
   type: "column2d", // The chart type
@@ -114,20 +117,7 @@ class CC extends React.Component
   render() 
   {
     //console.log("xyz");
-    fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
-      method: 'get',
-      dataType: 'json',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }).then(response => response.json()).then(response => 
-      {
-
-     chartConfigs.data=response;
-    console.log(response)
-
-  });
+    
   return (<ReactFC {...chartConfigs} />);
  }
 }
