@@ -43,6 +43,7 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
     // return "";
     const obj= JSON.parse(res);
     var ix=0;
+    chartData=[];
     for(var k in obj)
     {
       //console.log(k);
@@ -118,6 +119,8 @@ const chartConfigs = {
       yAxisName: "USD",  //Set the y-axis name
       numberSuffix: "$",
       valuePosition: "Amazon",
+      setAdaptiveYMin:"1",
+      setAdaptiveYMax:"1",
       theme: "fusion"                 //Set the theme for your chart
     },
     // Chart Data - from step 2
