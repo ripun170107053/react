@@ -66,10 +66,11 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
             
               //zz is x-axis time i.e index
               //obj[k][zz] is value i.e stock price
-              chartData[zz]["seriesname"].equals(k.toString())
-              {
-                chartData[zz]["data"].push(obj[k][zz].toString());
-              }
+              // chartData[zz]["seriesname"].equals(k.toString())
+              // {
+              //   chartData[zz]["data"].push(obj[k][zz].toString());
+              // }
+              console.log(chartData[zz]);
         
            }
     }
