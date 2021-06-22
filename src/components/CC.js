@@ -15,8 +15,10 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 import axios from 'axios';
 // Step 6 - Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
+//https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/
 // Preparing the chart data
 var chartData=[];
+var maxlenz=0;
 fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       method: 'get',
       dataType: 'json',
@@ -28,8 +30,9 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       {
 
      //chartConfigs.data=response;
-     var r1=response;
+     //var r1=response;
      var res=JSON.stringify(response);
+     //var res=JSON.stringify({"Apple":[356.23,361.31,358.12,357.09,353.62],"Amazon":[349.56,351.43,350.12,348.91]});
     
     const obj= JSON.parse(res);
     var ix=0;
@@ -51,91 +54,82 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
           
         // }
         chartData.push({
-          "seriesname": k.toString(),
-          "data":[],
+          seriesname: k.toString(),
+          data:[],
         })
         
       }
       
+      //console.log(chartData);
       for(var k in obj)
       {
         
-          
+          //console.log(k);
+          //console.log(obj[k]);
           for(var zz=0;zz<obj[k].length;zz++)
           {
             
-              //zz is x-axis time i.e index
-              //obj[k][zz] is value i.e stock price
-              // chartData[zz]["seriesname"].equals(k.toString())
-              // {
-              //   chartData[zz]["data"].push(obj[k][zz].toString());
-              // }
-              console.log(chartData[zz]);
+              
+              for(var mm=0;mm<chartData.length;mm++)
+              {
+                if(k==chartData[mm]['seriesname'])
+                {
+                  //console.log(obj[k][zz] + "->" + chartData[mm]['seriesname']);
+                  chartData[mm]['data'].push({"value":obj[k][zz].toString()});
+                  maxlenz=Math.max(maxlenz,chartData[mm]['data'].length);
+
+                }
+              }
+
         
            }
+           
     }
   });
+  
+
+    
+
 
 console.log(chartData);
-var chartData2 = [
-  {
-    label: "Venezuela",
-    value: "290"
-  },
-  {
-    label: "Saudi",
-    value: "260"
-  },
-  {
-    label: "Canada",
-    value: "180.45"
-  },
-  {
-    label: "Iran",
-    value: "140"
-  },
-  {
-    label: "Russia",
-    value: "115"
-  },
-  {
-    label: "UAE",
-    value: "100"
-  },
-  {
-    label: "US",
-    value: "30"
-  },
-  {
-    label: "China",
-    value: "30"
-  }
-];
-// console.log(chartData2);
-// console.log(typeof chartData);
-// console.log(typeof chartData2);
-// Create a JSON object to store the chart configurations
-const chartConfigs = {
-  type: "msline", // The chart type
-  width: "700", // Width of the chart
-  height: "400", // Height of the chart
-  dataFormat: "json", // Data type
-  dataSource: {
-    // Chart Configuration
-    chart: {
-      caption: "Stock Prices Data",    //Set the chart caption
-      subCaption: "",             //Set the chart subcaption
-      xAxisName: "Time",           //Set the x-axis name
-      yAxisName: "USD",  //Set the y-axis name
-      numberSuffix: "$",
-      setAdaptiveYMin:"1",
-      setAdaptiveYMax:"1",
-      theme: "fusion"                 //Set the theme for your chart
-    },
-    // Chart Data - from step 2
-    data: chartData
-  }
-};
+var cats=[]
+for(var lol=0;lol<5;lol++)
+{
+  cats.push({"label":toString(lol)});
+}
+console.log(cats);
+const chartConfigs=
+{
+  type: 'msline',
+    renderAt: 'chart-container',
+    width: '700',
+    height: '400',
+    dataFormat: 'json',
+    dataSource: {
+      "chart": {
+        "theme": "fusion",
+        "caption": "Stock Market Prices (from supplied Excel Sheet)",
+        
+        "xAxisName": "Time"
+      },
+      "categories": 
+      [{
+        "category": cats
+        // [{
+        //     "label": "Mon"
+        //   },
+        //   {
+        //     "label": "Tue"
+        //   },
+          
+       // ]
+      }],
+      "dataset": chartData,
+    }
+      
+    
+  
+}
 
 class CC extends React.Component 
 {
