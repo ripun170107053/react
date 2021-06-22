@@ -16,8 +16,21 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 // Step 6 - Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 // Preparing the chart data
+// fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
+//       method: 'get',
+//       dataType: 'json',
+//       headers: {
+//         'Accept': 'application/json',
+//         'Content-Type': 'application/json'
+//       }
+//     }).then(response => response.json()).then(response => 
+//       {
 
-const chartData = [
+//      //chartConfigs.data=response;
+//     console.log(response)
+
+//   });
+var chartData = [
   {
     label: "Venezuela",
     value: "290"
@@ -100,7 +113,7 @@ class CC extends React.Component
   
   render() 
   {
-    console.log("xyz");
+    //console.log("xyz");
     fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       method: 'get',
       dataType: 'json',
@@ -111,7 +124,7 @@ class CC extends React.Component
     }).then(response => response.json()).then(response => 
       {
 
-        chartConfigs.data=response;
+     chartConfigs.data=response;
     console.log(response)
 
   });
