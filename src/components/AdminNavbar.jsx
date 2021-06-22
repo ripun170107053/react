@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CC from './CC';
+import getAllSE from './getAllSE';
+import UserLandingPage from './UserLandingPage';
+import UploadFiles from './upload-files.component';
+import updateCompany from "./components/updateCompany";
+import createNewUser from './components/createNewUser';
+import getAllSE from './components/getAllSE';
+import CreateCompany from "./components/createCompany";
+import Apps from "./components/Apps";
 import {
     Collapse,
     Navbar,
@@ -16,6 +26,7 @@ const AdminNavbar=()=>
 {
     
     return (
+        <Router>
         <div>
          <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
@@ -56,6 +67,7 @@ const AdminNavbar=()=>
         <Route exact path="/companyComparison" component={CC}/>
         
         </div>
+        </Router>
     );
 }
 export default AdminNavbar;

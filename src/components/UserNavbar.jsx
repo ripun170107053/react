@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import CC from './CC';
+import getAllSE from './getAllSE';
 import {
     Collapse,
     Navbar,
@@ -17,12 +20,13 @@ const UserNavbar=()=>
     //const[isOpen,setIsOpen] = useState(false);
     //const toggle= () => setIsOpen(!isOpen);
     return (
+        <Router>
         <div>
          <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/createNewUser">Home</Link>
-            </li>
+            </li> */}
             
             <li className="nav-item">
               <Link to="/listStockExchanges">List Stock Exchanges</Link>
@@ -36,7 +40,7 @@ const UserNavbar=()=>
         
         {/* <Route exact path="/" exact component={UserLandingPage} />
         <Route exact path="/uploadExcel" component={UploadFiles} /> */}
-        <Route exact path="/createNewUser" component={createNewUser} />
+        {/* <Route exact path="/createNewUser" component={createNewUser} /> */}
         {/* <Route exact path="/createCompany" component={CreateCompany} />
         <Route exact path="/updateCompany" component={updateCompany} /> */}
         {/* <Route exact path="/viewAllCompany" component={Apps}/> */}
@@ -45,6 +49,7 @@ const UserNavbar=()=>
         <Route exact path="/companyComparison" component={CC}/>
         
         </div>
+        </Router>
     );
 }
 export default UserNavbar;
