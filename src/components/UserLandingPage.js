@@ -8,7 +8,7 @@ const UserLandingPage = () => {
    // const [company,setCompany] = useState(null);
     return (
         <div>
-          user
+          Welcome !
     {/* <Autocomplete
       id="combo-box-demo"
       options={companies}

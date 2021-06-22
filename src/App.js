@@ -18,6 +18,8 @@ import updateCompany from "./components/updateCompany";
 import createNewUser from './components/createNewUser';
 import getAllSE from './components/getAllSE';
 import CC from './components/CC';
+import AdminNavbar from './components/AdminNavbar';
+import UserNavbar from './components/UserNavbar';
 import {
   Collapse,
   Navbar,
@@ -32,9 +34,9 @@ import {
 } from 'reactstrap';
 class App extends Component
 {
-  constructor()
+  constructor(props)
   {
-    super();
+    super(props);
     this.state = {
       admin: false,
     };
@@ -45,7 +47,8 @@ class App extends Component
       <Router>
       <div className="table">
       <h1>Stock Charting App</h1>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {this.state.admin ? <AdminNavbar/> : <UserNavbar/>}
+      {/* <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to="/createNewUser">Home</Link>
@@ -71,10 +74,10 @@ class App extends Component
               </DropdownMenu>
             </UncontrolledDropdown>
           </ul>
-        </nav>
+        </nav> */}
 
 
-
+      <switch>
         <Route exact path="/" exact component={UserLandingPage} />
         <Route exact path="/uploadExcel" component={UploadFiles} />
         <Route exact path="/createNewUser" component={createNewUser} />
@@ -84,6 +87,7 @@ class App extends Component
         <Route exact path="/listStockExchanges" component={getAllSE}/>
         {/* <Route exact path="/companies" component={CreateCompany} /> */}
         <Route exact path="/companyComparison" component={CC}/>
+        </switch>
       </div>
 </Router>
       
