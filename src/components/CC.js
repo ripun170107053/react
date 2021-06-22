@@ -17,7 +17,7 @@ import axios from 'axios';
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 // Preparing the chart data
 var chartData
-axios("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
+fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       method: 'get',
       dataType: 'json',
       headers: {
@@ -29,7 +29,7 @@ axios("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
 
      //chartConfigs.data=response;
     console.log(response)
-    chartData = response;
+    //chartData = response;
 
   });
 
