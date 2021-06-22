@@ -56,42 +56,21 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
         })
         
       }
-      for(var k in obj)
-      {
-        //console.log(k);
-        // if(k=='Amazon')
-        // {
-        //   //console.log('1st method');
+      
+    //   for(var k in obj)
+    //   {
+    //     //console.log(k);
+    //     // if(k=='Amazon')
+    //     // {
+    //     //   //console.log('1st method');
           
-          for(var zz=0;zz<obj[k].length;zz++)
-          {
-            // chartData[k.toString()].push(
-            //   {
-            //   "value":obj[k][zz].toString()
-
-            //   }
-            if(chartData[k.toString()]=="em")
-            {
-              chartData[k.toString()]=[];
-              chartData[k.toString()].push({
-                   "value":obj[k][zz].toString()
-    
-                   })
-
-            }
-            else
-            {
-              chartData[k.toString()].push({
-                "value":obj[k][zz].toString()
- 
-                })
-            }
+    //       for(var zz=0;zz<obj[k].length;zz++)
+    //       {
             
-          
-            // );
+    //           chartData
         
-      }
-    }
+    //        }
+    // }
   });
 console.log(chartData);
 var chartData2 = [
