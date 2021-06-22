@@ -93,9 +93,9 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
 
 console.log(chartData);
 var cats=[]
-for(var lol=0;lol<5;lol++)
+for(let lol=0;lol<5;lol++)
 {
-  cats.push({"label":toString(lol)});
+  cats.push({"label":lol.toString()});
 }
 console.log(cats);
 const chartConfigs=
