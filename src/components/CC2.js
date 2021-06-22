@@ -16,7 +16,6 @@ import FusionTheme from "fusioncharts/themes/fusioncharts.theme.fusion";
 // Step 6 - Adding the chart and theme as dependency to the core fusioncharts
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 // Preparing the chart data
-
 const chartData = [
   {
     label: "Venezuela",
@@ -71,49 +70,10 @@ const chartConfigs = {
     data: chartData
   }
 };
-class CC extends React.Component 
-{
-  constructor()
-  {
-    super();
-    this.state=
-    {
-      companies:[],
-      showChart:false,
-    }
+class CC extends React.Component {
+  render() {
+    return (<ReactFC {...chartConfigs} />);
   }
-  componentDidMount()
-    {
-        this.state.companies = [];
-    }
-    addCompanyToCompare = (e,v) => 
-    {
-      let companiesToDisplay = this.state.companies;
-      companiesToDisplay.push(v);
-       this.setState({
-           //count: ++this.state.count,
-           companiesToDisplay:companiesToDisplay
-       });
-      // console.log(companiesToDisplay);
-       this.showChart=true;
-    }
-  
-  render() 
-  {
-
-    fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
-      method: 'get',
-      dataType: 'json',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }).then(response => response.json()).then(response => {
-
-    console.log(response)
-
-  });
-  return (<ReactFC {...chartConfigs} />);
- }
 }
+
 export default CC;
