@@ -118,7 +118,6 @@ const chartConfigs = {
       xAxisName: "Time",           //Set the x-axis name
       yAxisName: "USD",  //Set the y-axis name
       numberSuffix: "$",
-      valuePosition: "Amazon",
       setAdaptiveYMin:"1",
       setAdaptiveYMax:"1",
       theme: "fusion"                 //Set the theme for your chart
@@ -181,6 +180,7 @@ class CC extends React.Component
   return (
     <div>
     <ReactFC {...chartConfigs} />
+    {console.log(chartData)}
     
     {/* <ReactFC {...chartConfigs2} /> */}
     </div>
