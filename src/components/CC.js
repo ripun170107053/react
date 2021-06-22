@@ -178,7 +178,7 @@ class CC extends React.Component
   return (
     <div>
     <ReactFC {...chartConfigs} />
-    <p>hey</p>
+    
     {/* <ReactFC {...chartConfigs2} /> */}
     </div>
   

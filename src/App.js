@@ -44,7 +44,7 @@ class App extends Component
     return(
       <Router>
       <div className="table">
-      <h1>UI Landing Page</h1>
+      <h1>Stock Charting App</h1>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
