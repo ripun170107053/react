@@ -52,7 +52,7 @@ const chartData = [
   }
 ];
 // Create a JSON object to store the chart configurations
-const chartConfigs = {
+var chartConfigs = {
   type: "column2d", // The chart type
   width: "700", // Width of the chart
   height: "400", // Height of the chart
@@ -100,7 +100,7 @@ class CC extends React.Component
   
   render() 
   {
-
+    console.log("xyz");
     fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
       method: 'get',
       dataType: 'json',
@@ -108,8 +108,10 @@ class CC extends React.Component
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
-    }).then(response => response.json()).then(response => {
+    }).then(response => response.json()).then(response => 
+      {
 
+        chartConfigs.data=response;
     console.log(response)
 
   });
