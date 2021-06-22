@@ -52,26 +52,29 @@ fetch("https://glacial-brook-60163.herokuapp.com/excel/uploadExcel2/", {
         // }
         chartData.push({
           "seriesname": k.toString(),
-          "data":"emp",
+          "data":[],
         })
         
       }
       
-    //   for(var k in obj)
-    //   {
-    //     //console.log(k);
-    //     // if(k=='Amazon')
-    //     // {
-    //     //   //console.log('1st method');
-          
-    //       for(var zz=0;zz<obj[k].length;zz++)
-    //       {
-            
-    //           chartData
+      for(var k in obj)
+      {
         
-    //        }
-    // }
+          
+          for(var zz=0;zz<obj[k].length;zz++)
+          {
+            
+              //zz is x-axis time i.e index
+              //obj[k][zz] is value i.e stock price
+              chartData[zz]["seriesname"].equals(k.toString())
+              {
+                chartData[zz]["data"].push(obj[k][zz].toString());
+              }
+        
+           }
+    }
   });
+
 console.log(chartData);
 var chartData2 = [
   {
