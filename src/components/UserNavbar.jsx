@@ -23,7 +23,7 @@ const UserNavbar=()=>
     return (
         <Router>
         <div>
-         <nav className="navbar navbar-expand-lg navbar-light bg-light">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             {/* <li className="nav-item">
               <Link to="/createNewUser">Home</Link>
