@@ -29,7 +29,7 @@ const AdminNavbar=()=>
         <Router>
         <div>
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <ul className="navbar-nav mr-auto">
+          <ul>
             <li className="nav-item">
               <Link to="/createNewUser">  Create New User </Link>
             </li>
