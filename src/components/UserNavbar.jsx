@@ -37,7 +37,7 @@ const UserNavbar=()=>
               <Link to="/companyComparison">  Compare Companies </Link>
             </li>
             <li className="nav-item">
-            <a href="https://glacial-brook-60163.herokuapp.com/IPO/allIPO" target="_blank" >  IPO Details </Link>
+            <a href="https://glacial-brook-60163.herokuapp.com/IPO/allIPO" target="_blank" >   IPO Details </a>
             </li>
             <p></p>
           </ul>
