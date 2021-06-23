@@ -24,7 +24,7 @@ const UserNavbar=()=>
         <Router>
         <div>
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <ul className="navbar-nav mr-auto">
+          <ul>
             {/* <li className="nav-item">
               <Link to="/createNewUser">Home</Link>
             </li> */}
@@ -39,7 +39,12 @@ const UserNavbar=()=>
             <li className="nav-item">
             <a href="https://glacial-brook-60163.herokuapp.com/IPO/allIPO" target="_blank" >   IPO Details </a>
             </li>
-            <p></p>
+            <p>
+
+            </p>
+            <li className="nav-item">
+            <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >   View All Companies </a>
+            </li>
           </ul>
         </nav>
         
