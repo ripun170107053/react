@@ -31,21 +31,21 @@ const AdminNavbar=()=>
          <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
-              <Link to="/createNewUser">Create New User</Link>
+              <Link to="/createNewUser">  Create New User </Link>
             </li>
             <p>
 
             </p>
             <li className="nav-item">
-              <Link to="/uploadExcel">Import Data</Link>
+              <Link to="/uploadExcel">  Import Data </Link>
             </li>
             <p></p>
             <li className="nav-item">
-              <Link to="/listStockExchanges">List Stock Exchanges</Link>
+              <Link to="/listStockExchanges"> List Stock Exchanges </Link>
             </li>
             <p></p>
             <li className="nav-item">
-              <Link to="/companyComparison">Compare Companies</Link>
+              <Link to="/companyComparison">  Compare Companies </Link>
             </li>
             <p></p>
             <UncontrolledDropdown>
@@ -54,9 +54,9 @@ const AdminNavbar=()=>
               </DropdownToggle>
               <DropdownMenu top >
                 <DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>
-                <DropdownItem ><Link to="/createCompany" > Add a new Company </Link></DropdownItem>
+                <DropdownItem ><Link to="/createCompany" >  Add a new Company </Link></DropdownItem>
                 {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
-                <DropdownItem ><Link to="/viewAllCompany" > View All </Link></DropdownItem>
+                <DropdownItem ><Link to="/viewAllCompany" >  View All </Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </ul>
