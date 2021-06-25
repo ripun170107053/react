@@ -53,14 +53,17 @@ class Apps extends Component {
           {
             cn.map(x=>(<p>{x}</p>))
           }
+          <div>
+                    <h3>Tabular form</h3>
+                    <ul>
+                        {cn.map(item => {
+                            return <li>{item}</li>;
+                        })}
+                    </ul>
+                </div>
         
         
-        <ul>
-        {
-          
-          
-        }
-        </ul>
+        
         </div>
     );
   }

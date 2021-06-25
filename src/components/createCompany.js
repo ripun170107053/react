@@ -200,6 +200,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
                             <input placeholder="Sector" name="sector" className="form-control" 
                                 value={this.state.sector} onChange={this.changehandler1}/>
                         </div>
+                        <div className = "form-group">
+                            <label> Stock Exchange: </label>
+                            <input placeholder="Stock Exchange" name="stockExchange" className="form-control" 
+                                value={this.state.stockExchange} onChange={this.changehandler1}/>
+                        </div>
 
                         <button className="btn btn-success" onClick={this.submit}>Save</button>
                         {/* <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button> */}
