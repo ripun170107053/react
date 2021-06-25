@@ -1,6 +1,6 @@
 import { lineBreak } from 'acorn';
 import React, { Component } from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Apps extends Component {
   // initially data is empty in state
@@ -50,17 +50,29 @@ class Apps extends Component {
     return (
         <div align="center">
         
-          {
+          {/* {
             cn.map(x=>(<p>{x}</p>))
-          }
+          } */}
           <div>
-                    <h3>Tabular form</h3>
-                    <ul>
+                    <h3>Companies</h3>
+                    <Table striped bordered hover variant="dark">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Stock Exchanges</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
                         {cn.map(item => {
-                            return <li>{item}</li>;
+                            return <td>{item}</td>;
                         })}
-                    </ul>
-                </div>
+                        </tr>
+                      
+                      </tbody>
+                    </Table>
+                    
+            </div>
         
         
         
