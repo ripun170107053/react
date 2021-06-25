@@ -53,9 +53,9 @@ class Apps extends Component {
           {/* {
             cn.map(x=>(<p>{x}</p>))
           } */}
-          <div>
+          <div class="center">
                     <h3>Companies</h3>
-                    <table class="table">
+                    <table class="table" >
                       <thead>
                         <tr>
                           <th>Name</th>
@@ -63,11 +63,11 @@ class Apps extends Component {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        
                         {cn.map(item => {
-                            return <td>{item}</td>;
+                            return <tr>{item}</tr>;
                         })}
-                        </tr>
+                        
                       
                       </tbody>
                     </table>
