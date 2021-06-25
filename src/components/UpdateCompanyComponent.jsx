@@ -22,7 +22,7 @@ class UpdateCompanyComponent extends Component {
     }
 
     componentDidMount(){
-        CompanyService.getCompanyById(this.state.id).then( (res) =>{
+        companyService.getCompanyById(this.state.id).then( (res) =>{
             let company = res.data;
             this.setState({companyCode: company.companyCode,
                 companyName: company.companyName,
@@ -52,7 +52,7 @@ class UpdateCompanyComponent extends Component {
             writeup: this.state.writeup,
             sector: this.state.sector
         };
-        CompanyService.updateCompany(company, this.state.id).then( res => {
+        companyService.updateCompany(company, this.state.id).then( res => {
             this.props.history.push('/companies/');
         });
     }
