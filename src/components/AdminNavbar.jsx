@@ -10,6 +10,7 @@ import createNewUser from './createNewUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CreateCompany from "./createCompany";
 import Apps from "./Apps";
+
 import {
     Collapse,
     Navbar,
@@ -28,7 +29,7 @@ const AdminNavbar=()=>
     return (
         <Router>
         <div>
-         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <nav class="navbar navbar-expand-lg navbar-light bg-darknp">
           <ul>
             <li className="nav-item">
               <Link to="/createNewUser">  Create New User </Link>

@@ -19,7 +19,11 @@ class App extends Component
   render()
   {
     return (
+     <>
      
+      <switch>
+
+      </switch>
       <Router>
       <div className="wrapper">
         <h1>Stock Market App</h1>
@@ -34,7 +38,7 @@ class App extends Component
         <Route exact path="/user" component={UserNavbar} />
       </div>
       </Router>
-      
+      </>
     );
   }
   

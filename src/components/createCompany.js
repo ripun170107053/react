@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import exportFromJSON from 'export-from-json';
 import axios from 'axios';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
  class createCompany extends Component
  {
     constructor(props) {
@@ -160,195 +160,60 @@ import axios from 'axios';
       return (
         // 
         
-        <div className="table" align="center" style={{paddingTop : '50px'}}>
-        <form onSubmit={this.submit}> 
-          Company name :{" "}
-          <input
-            type="companyName"
-            name="companyName"
-            value={this.state.companyName}
-            ref="companyName"
-            onChange={this.changehandler1}
-          />
-          <br />
-          <p></p>
-          Company turnover :{" "}
-          <input
-            type="turnover"
-            name="turnover"
-            value={this.state.turnover}
-            ref="turnover"
-            onChange={this.changehandler1}
-          />
-          <br />
-          <p></p>
-          Company ceo :{" "}
-          <input
-            type="ceo"
-            name="ceo"
-            value={this.state.ceo}
-            ref="ceo"
-            onChange={this.changehandler1}
-          />
-          <br />
-          <p></p>
-          Company writeup :{" "}
-          <input
-            type="writeup"
-            name="writeup"
-            value={this.state.writeup}
-            ref="writeup"
-            onChange={this.changehandler1}
-          />
-          <br />
-          Company stockExchange :{" "}
-          
-          <input
-            type="stockExchange"
-            name="stockExchange"
-            value={this.state.stockExchange}
-            ref="stockExchange"
-            onChange={this.changehandler1}
-          />
-          <br />
-          Company boardDirector :{" "}
-          <input
-            type="boardDirector"
-            name="boardDirector"
-            value={this.state.boardDirector}
-            ref="boardDirector"
-            onChange={this.changehandler1}
-          />
-          <br />
-          Company sector :{" "}
-          <input
-            type="sector"
-            name="sector"
-            value={this.state.sector}
-            ref="sector"
-            onChange={this.changehandler1}
-          />
-          <br />
-          Company code :{" "}
-          <input
-            type="companyCode"
-            name="companyCode"
-            value={this.state.companyCode}
-            ref="companyCode"
-            onChange={this.changehandler1}
-          />
-          <br />
-          <button type="submit">Save now</button>
-         
-          {/* <button onClick={this.posthttpjson}>
-    Submit
-  </button> */}
-        </form>
+        <div>
+            <div>
+                
+                <div className = "card-body">
+                    <form>
+                        <div className = "form-group">
+                            <label> Company Code: </label>
+                            <input placeholder="Company Code" name="companyCode" className="form-control" 
+                                value={this.state.companyCode} onChange={this.changehandler1}/>
+                        </div>
+                        <div className = "form-group">
+                            <label> Company Name: </label>
+                            <input placeholder="Company Name" name="companyName" className="form-control" 
+                                value={this.state.companyName} onChange={this.changehandler1}/>
+                        </div>
+                        <div className = "form-group">
+                            <label> CEO Name: </label>
+                            <input placeholder="CEO Name" name="ceo" className="form-control" 
+                                value={this.state.ceo} onChange={this.changehandler1}/>
+                        </div>
+                        <div className = "form-group">
+                            <label> Turnover: </label>
+                            <input placeholder="Turnover" name="turnover" className="form-control" 
+                                value={this.state.turnover} onChange={this.changehandler1}/>
+                        </div>
+                        <div className = "form-group">
+                            <label> Board Of Directors: </label>
+                            <input placeholder="Board Of Directors" name="boardDirector" className="form-control" 
+                                value={this.state.boardDirector} onChange={this.changehandler1}/>
+                        </div>
+                        <div className = "form-group">
+                            <label> Brief: </label>
+                            <input placeholder="Writeup" name="writeup" className="form-control" 
+                                value={this.state.writeup} onChange={this.changehandler1}/>
+                        </div>
+                        <div className = "form-group">
+                            <label> Sector: </label>
+                            <input placeholder="Sector" name="sector" className="form-control" 
+                                value={this.state.sector} onChange={this.changehandler1}/>
+                        </div>
+
+                        <button className="btn btn-success" onClick={this.submit}>Save</button>
+                        {/* <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button> */}
+                    </form>
+                </div>
+            </div>
         </div>
+
+
+
         
       );
     }
   }
-// {
-     
-    
-//     constructor()
-//     {
-//         super();
-        
-//         this.state = {
-//             companyName:"",
-//             ceo:"",
-//             boardDirector:"",
-//             turnover: 0,
-//             stockExchange:"",
-//             writeup:"",
-//             sector:"",
-//             companyCode:"",
-            
-//         }
-        
-//     }
-    
 
-//     render() 
-//     {
-        
-//         getSE();
-//         {console.log(sen + "outside")};
-        
-//         return (
-            
-//             <div >
-                
-                
-                
-//                 <br></br>
-//                <h2 align="center">Add Company Details</h2>
-//                <br></br>
-               
-//                 <form>
-//                     <div>
-                    
-                    
-//                     <label htmlFor="companyName">Company Name</label>
-//                     <input type="text" className="form-control" name="companyName" value={this.state.companyName}  onChange={this.handleChange} id="companyName" />
-//                     </div>
-//                     <div className="form-group mb-3 ">
-//                     <label htmlFor="CEOname">CEO Name</label>
-//                     <input type="text" className="form-control" name="ceo" value={this.state.ceo}  onChange={this.handleChange}  id="CEOname"/>
-//                     </div>
-//                     <div className="form-group mb-3 ">
-//                     <label htmlFor="boardDirector">Board Of Directors</label>
-//                     <input type="text"  className="form-control"  name="boardDirector" value={this.state.boardDirector} onChange={this.handleChange} id="boardDirector"/>
-//                     </div>
-//                     <div className="form-group mb-3">
-//                     <label htmlFor="turnover">Turn Over in $</label>
-//                     <input type="number" className="form-control" name="turnover" value={this.state.turnover} onChange={this.handleChange} id="turnover"/>
-//                     </div>
-//                     <div className="form-group">
-//                     <label htmlFor="writeupription">Writeup</label>
-//                     <input type="textbox" className="form-control rounded" name="writeup" value={this.state.writeup}onChange={this.handleChange} id="writeupription"/>
-//                     </div>
-//                     <div className="form-group">
-//                     <label htmlFor="companyCode">companyCode</label>
-//                     <input type="textbox" className="form-control rounded" name="companyCode" value={this.state.companyCode}onChange={this.handleChange} id="companyCode"/>
-//                     </div>
-                    
-//                     <div className="form-group">
-//                     <label htmlFor="stockExchange">stockExchange</label>
-//                     <Select
-                        
-//                     />
-//                     </div>
-
-//                     <div className="form-group">
-//                     <label htmlFor="sector">sector</label>
-//                     <input type="textbox" className="form-control rounded" name="sector" value={this.state.sector}onChange={this.handleChange} id="sector"/>
-//                     </div> 
-
-                    
-//                     <button type="submit" className="btn btn-md btn-success">Submit</button>
-//                 </form>
-//             </div>
-//         )
-//     }
-//      getSE()
-//         {
-//             fetch('https://glacial-brook-60163.herokuapp.com/stockExchange/').then(response => response.json())
-//             .then((jsonData) => {
-//               // jsonData is parsed json object received from url
-//               this.sen=jsonData.map(function(item)
-//               {
-//                   return item.stockExchange;
-//               });
-//               console.log(sen + "inside")
-//             })
-//             .catch((error) => {
-//               // handle your errors here
-//               console.error(error)
-//             });
-//         };
-// }
 
 export default createCompany;
