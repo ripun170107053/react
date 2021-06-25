@@ -55,7 +55,7 @@ class Apps extends Component {
           } */}
           <div>
                     <h3>Companies</h3>
-                    <Table striped bordered hover variant="dark">
+                    <table class="table">
                       <thead>
                         <tr>
                           <th>Name</th>
@@ -70,7 +70,7 @@ class Apps extends Component {
                         </tr>
                       
                       </tbody>
-                    </Table>
+                    </table>
                     
             </div>
         
