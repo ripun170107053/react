@@ -22,68 +22,99 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-  } from 'reactstrap';
-  
-  import { NavDropdown } from 'react-bootstrap';
-  import { Form } from 'reactstrap';
-  import { FormControl } from 'react-bootstrap';
-  import { Button } from 'reactstrap';
-  //import { Navbar } from 'react-bootstrap';
+} from 'reactstrap';
 const AdminNavbar=()=>
 {
-    
+
     return (
+        <Router>
+            <div>
+                {/*<nav class="navbar navbar-expand-lg navbar-light bg-darknp">*/}
+                    <table class="table">
+                        <td className="nav-item">
+                            <UncontrolledDropdown>
+                                <DropdownToggle>
+                                    Import Data
+                                </DropdownToggle>
+                                <DropdownMenu top >
+                                    <DropdownItem ><Link to="/uploadExcel">  Import Data </Link></DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
 
-            <Router>
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <a className="navbar-brand" href="#">Admin</a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                        </td>
+                        {/*<li className="nav-item">*/}
+                        {/*    <Link to="/createNewUser">  Create New User </Link>*/}
+                        {/*</li>*/}
+                        {/*<p>*/}
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="/viewAllCompany">View All Companies <span className="sr-only">(current)</span></a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="#">Action</a>
-                                    <a className="dropdown-item" href="#">Another action</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+                        {/*</p>*/}
 
-                    </div>
-                </nav>
-            <Route exact path="/" exact component={UserLandingPage} />
-            <Route exact path="/uploadExcel" component={UploadFiles} />
-            <Route exact path="/createNewUser" component={createNewUser} />
-            <Route exact path="/createCompany" component={CreateCompany} />
-            {/* <Route exact path="/updateCompany" component={updateCompany} /> */}
-            <Route exact path="/viewAllCompany" component={Apps}/>
-            <Route exact path="/listStockExchanges" component={getAllSE}/>
-            {/* <Route exact path="/companies" component={CreateCompany} /> */}
-            <Route exact path="/companyComparison" component={CC}/>
-            <Route path = "/company/2/update" component = {UpdateCompanyComponent}/>
+                        {/*<p></p>*/}
+                        {/*<li className="nav-item">*/}
+                        {/*    <Link to="/listStockExchanges"> List Stock Exchanges </Link>*/}
+                        {/*</li>*/}
+                        {/*<p></p>*/}
+                        {/*<li className="nav-item">*/}
+                        {/*    <Link to="/companyComparison">  Compare Companies </Link>*/}
+                        {/*</li>*/}
+                        {/*<p></p>*/}
+                        <td>
+                        <UncontrolledDropdown>
+                            <DropdownToggle>
+                                Manage Companies
+                            </DropdownToggle>
+                            <DropdownMenu top >
+                                {/*//<DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>*/}
+                                <DropdownItem ><Link to="/createCompany" >  Add a new Company </Link></DropdownItem>
+                                {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
+                                {/*//<DropdownItem ><Link to="/viewAllCompany" >  View All </Link></DropdownItem>*/}
+                                <DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                        </td>
+                        <td>
+                            <UncontrolledDropdown>
+                                <DropdownToggle>
+                                    Manage Exchange
+                                </DropdownToggle>
+                                <DropdownMenu top >
+                                    {/*<DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>*/}
+                                    <DropdownItem ><Link to="/listStockExchanges" >  List Existing Stock Exchange </Link></DropdownItem>
+                                    {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
+                                    <DropdownItem ><Link to="/viewAllCompany" > Create New Stock Exchange </Link></DropdownItem>
+                                    {/*<DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>*/}
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+                        </td>
+                        <td>
+                            <UncontrolledDropdown>
+                                <DropdownToggle>
+                                    Update IPO Details
+                                </DropdownToggle>
+                                <DropdownMenu top >
+                                    {/*<DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>*/}
+                                    <DropdownItem ><Link to="/createCompany" >  Add a new IPO </Link></DropdownItem>
+                                    {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
+                                    <DropdownItem ><Link to="/viewAllCompany" >  View All IPOs </Link></DropdownItem>
+                                    {/*<DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>*/}
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+                        </td>
+                    </table>
+                {/*</nav>*/}
 
+                <Route exact path="/" exact component={UserLandingPage} />
+                <Route exact path="/uploadExcel" component={UploadFiles} />
+                <Route exact path="/createNewUser" component={createNewUser} />
+                <Route exact path="/createCompany" component={CreateCompany} />
+                {/* <Route exact path="/updateCompany" component={updateCompany} /> */}
+                <Route exact path="/viewAllCompany" component={Apps}/>
+                <Route exact path="/listStockExchanges" component={getAllSE}/>
+                {/* <Route exact path="/companies" component={CreateCompany} /> */}
+                <Route exact path="/companyComparison" component={CC}/>
+                <Route path = "/company/2/update" component = {UpdateCompanyComponent}/>
+            </div>
         </Router>
-
-
     );
 }
 export default AdminNavbar;
