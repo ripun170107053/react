@@ -26,7 +26,7 @@ import {
   
   import { NavDropdown } from 'reactstrap';
   import { Form } from 'reactstrap';
-  import { FormControl } from 'reactstrap';
+  import { FormControl } from 'react-bootstrap';
   import { Button } from 'reactstrap';
   //import { Navbar } from 'react-bootstrap';
 const AdminNavbar=()=>
