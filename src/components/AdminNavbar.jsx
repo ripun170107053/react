@@ -33,9 +33,10 @@ const AdminNavbar=()=>
 {
     
     return (
-        <div>
+
+            <Router>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Navbar</a>
+            <a className="navbar-brand" href="#">Admin</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -45,7 +46,7 @@ const AdminNavbar=()=>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/companies">View All Companies <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">Link</a>
@@ -66,14 +67,22 @@ const AdminNavbar=()=>
                         <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <form className="form-inline my-2 my-lg-0">
-                    <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </input>
-                </form>
+
             </div>
         </nav>
-        </div>
+            <Route exact path="/" exact component={UserLandingPage} />
+            <Route exact path="/uploadExcel" component={UploadFiles} />
+            <Route exact path="/createNewUser" component={createNewUser} />
+            <Route exact path="/createCompany" component={CreateCompany} />
+            {/* <Route exact path="/updateCompany" component={updateCompany} /> */}
+            <Route exact path="/viewAllCompany" component={Apps}/>
+            <Route exact path="/listStockExchanges" component={getAllSE}/>
+            {/* <Route exact path="/companies" component={CreateCompany} /> */}
+            <Route exact path="/companyComparison" component={CC}/>
+            <Route path = "/company/2/update" component = {UpdateCompanyComponent}/>
+
+        </Router>
+        
 
     );
 }
