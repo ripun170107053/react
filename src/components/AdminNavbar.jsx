@@ -25,11 +25,12 @@ import {
 } from 'reactstrap';
 import IpoForm from "./IpoForm";
 import AddIPO from "./AddIPO";
+import AddBook from "./AddBook";
 const AdminNavbar=()=>
 {
 
     return (
-        <Router>
+        
             <div>
                 {/*<nav class="navbar navbar-expand-lg navbar-light bg-darknp">*/}
                     <table class="table">
@@ -114,10 +115,10 @@ const AdminNavbar=()=>
                 {/*<Route exact path="/listStockExchanges" component={getAllSE}/>*/}
                 {/*/!* <Route exact path="/companies" component={CreateCompany} /> *!/*/}
                 {/*<Route exact path="/companyComparison" component={CC}/>*/}
-                {/*<Route exact path="/addIPO" component={IpoForm}/>*/}
+                {/*<Route exact path="/addIPO" component={AddBook}/>*/}
                 {/*<Route path = "/company/2/update" component = {UpdateCompanyComponent}/>*/}
             </div>
-        </Router>
+
     );
 }
 export default AdminNavbar;
