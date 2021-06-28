@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import Switch from "react-bootstrap/Switch";
 import './App.css';
 
 import AdminNavbar from './components/AdminNavbar';
@@ -21,9 +21,9 @@ class App extends Component
     return (
      <>
      
-      <switch>
+      <Switch>
 
-      </switch>
+      </Switch>
       <Router>
       <div className="wrapper">
         <h1>Stock Market App</h1>

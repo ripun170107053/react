@@ -23,7 +23,8 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
-import IpoForm from "./ipoForm";
+import IpoForm from "./IpoForm";
+import AddIPO from "./AddIPO";
 const AdminNavbar=()=>
 {
 
@@ -104,17 +105,17 @@ const AdminNavbar=()=>
                     </table>
                 {/*</nav>*/}
 
-                <Route exact path="/" exact component={UserLandingPage} />
-                <Route exact path="/uploadExcel" component={UploadFiles} />
-                <Route exact path="/createNewUser" component={createNewUser} />
-                <Route exact path="/createCompany" component={CreateCompany} />
-                {/* <Route exact path="/updateCompany" component={updateCompany} /> */}
-                <Route exact path="/viewAllCompany" component={Apps}/>
-                <Route exact path="/listStockExchanges" component={getAllSE}/>
-                {/* <Route exact path="/companies" component={CreateCompany} /> */}
-                <Route exact path="/companyComparison" component={CC}/>
-                <Route exact path="/addIPO" component={IpoForm}/>
-                <Route path = "/company/2/update" component = {UpdateCompanyComponent}/>
+                {/*<Route exact path="/" exact component={UserLandingPage} />*/}
+                {/*<Route exact path="/uploadExcel" component={UploadFiles} />*/}
+                {/*<Route exact path="/createNewUser" component={createNewUser} />*/}
+                {/*<Route exact path="/createCompany" component={CreateCompany} />*/}
+                {/*/!* <Route exact path="/updateCompany" component={updateCompany} /> *!/*/}
+                {/*<Route exact path="/viewAllCompany" component={Apps}/>*/}
+                {/*<Route exact path="/listStockExchanges" component={getAllSE}/>*/}
+                {/*/!* <Route exact path="/companies" component={CreateCompany} /> *!/*/}
+                {/*<Route exact path="/companyComparison" component={CC}/>*/}
+                {/*<Route exact path="/addIPO" component={IpoForm}/>*/}
+                {/*<Route path = "/company/2/update" component = {UpdateCompanyComponent}/>*/}
             </div>
         </Router>
     );
