@@ -6,6 +6,11 @@ const AddBook = ({ history }) => {
   const { books, setBooks } = useContext(BooksContext);
 
   const handleOnSubmit = (book) => {
+    //console.log(JSON.stringify(book));
+    book.id=5;
+
+    var x= JSON.stringify(book);
+
     setBooks([book, ...books]);
     history.push('/');
   };
