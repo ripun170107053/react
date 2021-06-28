@@ -23,6 +23,7 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
+import IpoForm from "./ipoForm";
 const AdminNavbar=()=>
 {
 
@@ -93,7 +94,7 @@ const AdminNavbar=()=>
                                 </DropdownToggle>
                                 <DropdownMenu top >
                                     {/*<DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>*/}
-                                    <DropdownItem ><Link to="/createCompany" >  Add a new IPO </Link></DropdownItem>
+                                    <DropdownItem ><Link to="/addIPO" >  Add a new IPO </Link></DropdownItem>
                                     {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
                                     <DropdownItem ><Link to="/viewAllCompany" >  View All IPOs </Link></DropdownItem>
                                     {/*<DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>*/}
@@ -112,6 +113,7 @@ const AdminNavbar=()=>
                 <Route exact path="/listStockExchanges" component={getAllSE}/>
                 {/* <Route exact path="/companies" component={CreateCompany} /> */}
                 <Route exact path="/companyComparison" component={CC}/>
+                <Route exact path="/addIPO" component={IpoForm}/>
                 <Route path = "/company/2/update" component = {UpdateCompanyComponent}/>
             </div>
         </Router>
