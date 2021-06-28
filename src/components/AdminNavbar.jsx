@@ -24,7 +24,7 @@ import {
     DropdownItem,
   } from 'reactstrap';
   
-  import { NavDropdown } from 'reactstrap';
+  import { NavDropdown } from 'react-bootstrap';
   import { Form } from 'reactstrap';
   import { FormControl } from 'react-bootstrap';
   import { Button } from 'reactstrap';
