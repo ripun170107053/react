@@ -24,11 +24,11 @@ import {
     DropdownItem,
   } from 'reactstrap';
   
-  import { NavDropdown } from 'react-bootstrap';
-  import { Form } from 'react-bootstrap';
-  import { FormControl } from 'react-bootstrap';
-  import { Button } from 'react-bootstrap';
-  import { Navbar } from 'react-bootstrap';
+  import { NavDropdown } from 'reactstrap';
+  import { Form } from 'reactstrap';
+  import { FormControl } from 'reactstrap';
+  import { Button } from 'reactstrap';
+  //import { Navbar } from 'react-bootstrap';
 const AdminNavbar=()=>
 {
     
