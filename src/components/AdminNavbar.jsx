@@ -30,7 +30,7 @@ const AdminNavbar=()=>
 {
 
     return (
-        
+        <Route>
             <div>
                 {/*<nav class="navbar navbar-expand-lg navbar-light bg-darknp">*/}
                     <table class="table">
@@ -72,6 +72,7 @@ const AdminNavbar=()=>
                                 {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
                                 {/*//<DropdownItem ><Link to="/viewAllCompany" >  View All </Link></DropdownItem>*/}
                                 <DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>
+                                <DropdownItem ><Link to="/viewAllCompanies" >  View All Companies </Link></DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         </td>
@@ -98,7 +99,7 @@ const AdminNavbar=()=>
                                     {/*<DropdownItem > <a href="https://glacial-brook-60163.herokuapp.com/companies/" target="_blank" >View All Companies</a> </DropdownItem>*/}
                                     <DropdownItem ><Link to="/addIPO" >  Add a new IPO </Link></DropdownItem>
                                     {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
-                                    <DropdownItem ><Link to="/viewAllCompany" >  View All IPOs </Link></DropdownItem>
+                                    <DropdownItem ><Link to="/allIPO" >  View All IPOs </Link></DropdownItem>
                                     {/*<DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>*/}
                                 </DropdownMenu>
                             </UncontrolledDropdown>
@@ -113,12 +114,12 @@ const AdminNavbar=()=>
                 {/*/!* <Route exact path="/updateCompany" component={updateCompany} /> *!/*/}
                 {/*<Route exact path="/viewAllCompany" component={Apps}/>*/}
                 {/*<Route exact path="/listStockExchanges" component={getAllSE}/>*/}
-                {/*/!* <Route exact path="/companies" component={CreateCompany} /> *!/*/}
+                {/* <Route exact path="/companies" component={CreateCompany} />*/}
                 {/*<Route exact path="/companyComparison" component={CC}/>*/}
                 {/*<Route exact path="/addIPO" component={AddBook}/>*/}
                 {/*<Route path = "/company/2/update" component = {UpdateCompanyComponent}/>*/}
             </div>
-
+        </Route>
     );
 }
 export default AdminNavbar;

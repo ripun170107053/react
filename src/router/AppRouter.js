@@ -28,19 +28,19 @@ const AppRouter = () => {
         <div className="main-content">
           <BooksContext.Provider value={{ books, setBooks }}>
             <Switch>
-              {/*<Route component={BooksList} path="/" exact={true} />*/}
-              {/*/!*<Route component={AddBook} path="/add" />*!/*/}
-              {/*<Route component={EditBook} path="/edit/:id" />*/}
+              <Route component={BooksList} path="/allIPO" exact={true} />
+              {/*<Route component={AddBook} path="/addIPO" />*/}
+              <Route component={EditBook} path="/edit/:id" />
               {/*<Route component={() => <Redirect to="/" />} />*/}
               {/*<Route exact path="/" exact component={UserLandingPage} />*/}
-              {/*<Route exact path="/uploadExcel" component={UploadFiles} />*/}
-              {/*<Route exact path="/createNewUser" component={createNewUser} />*/}
-              {/*<Route exact path="/createCompany" component={CreateCompany} />*/}
+              <Route exact path="/uploadExcel" component={UploadFiles} />
+              <Route exact path="/createNewUser" component={createNewUser} />
+              <Route exact path="/createCompany" component={CreateCompany} />
               {/*/!* <Route exact path="/updateCompany" component={updateCompany} /> *!/*/}
-              {/*<Route exact path="/viewAllCompany" component={Apps}/>*/}
-              {/*<Route exact path="/listStockExchanges" component={getAllSE}/>*/}
+              <Route exact path="/viewAllCompanies" component={Apps}/>
+              <Route exact path="/listStockExchanges" component={getAllSE}/>
               {/*/!* <Route exact path="/companies" component={CreateCompany} /> *!/*/}
-              {/*<Route exact path="/companyComparison" component={CC}/>*/}
+              <Route exact path="/companyComparison" component={CC}/>
               <Route exact path="/addIPO" component={AddBook}/>
               {/*<Route path = "/company/2/update" component = {UpdateCompanyComponent}/>*/}
             </Switch>
