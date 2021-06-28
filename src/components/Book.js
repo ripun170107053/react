@@ -3,12 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
 const Book = ({
-  id,
-  bookname,
-  author,
-  price,
-  quantity,
-  date,
+  id, companyName, stockExchange, pricePerShare, totalNumberOfShares, openDateTime, remarks,
   handleRemoveBook
 }) => {
   const history = useHistory();
@@ -16,12 +11,13 @@ const Book = ({
   return (
     <Card style={{ width: '18rem' }} className="book">
       <Card.Body>
-        <Card.Title className="book-title">{bookname}</Card.Title>
+        <Card.Title className="book-title">{companyName}</Card.Title>
         <div className="book-details">
-          <div>Author: {author}</div>
-          <div>Quantity: {quantity} </div>
-          <div>Price: {price} </div>
-          <div>Date: {new Date(date).toDateString()}</div>
+          <div>Stock Exchange: {stockExchange}</div>
+          <div>Quantity: {totalNumberOfShares} </div>
+          <div>Price: {pricePerShare} </div>
+          <div>Date: {new Date(openDateTime).toDateString()}</div>
+          <div>Remarks: {remarks}</div>
         </div>
         <Button variant="primary" onClick={() => history.push(`/edit/${id}`)}>
           Edit

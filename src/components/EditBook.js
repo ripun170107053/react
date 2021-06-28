@@ -12,6 +12,7 @@ const EditBook = ({ history }) => {
     const filteredBooks = books.filter((book) => book.id !== id);
     setBooks([book, ...filteredBooks]);
     history.push('/');
+
   };
 
   return (
