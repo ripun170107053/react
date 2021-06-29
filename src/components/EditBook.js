@@ -36,8 +36,9 @@ const EditBook = ({ history }) => {
       ppp+=pp[i];
     }
     book.openDateTime=ppp;
-    console.log(book);
+
     var xx=JSON.stringify(book);
+    console.log(xx); 
     IpoService.updateIpo(xx,book.id).then(r => console.log("Success"));
 
   };
