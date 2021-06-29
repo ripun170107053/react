@@ -13,14 +13,35 @@ const AddBook = ({ history }) => {
 
     setBooks([book, ...books]);
     history.push('/');
-    // state = { redirect: null };
-    // setTimeout(function () {
-    //   window.location.href = "/allIPO"; //will redirect to your blog page (an ex: blog.html)
-    // }, 1);
+
     var x= JSON.stringify(book);
 
-    console.log(x);
-    IpoService.createIpo(x).then(r => console.log("Success"));
+    var p = JSON.stringify(book.openDateTime);
+    var pp="";
+    for(var i =0;i<p.length;i++)
+    {
+      if(p[i]==='T' || p[i]==='Z')
+      {
+
+      }
+      else
+        pp+=p[i];
+    }
+    var ppp="";
+    for(var i=1;i<=10;i++)
+    {
+      ppp+=pp[i];
+    }
+    ppp+=' ';
+
+    for(var i=11;i<=18;i++)
+    {
+      ppp+=pp[i];
+    }
+    book.openDateTime=ppp;
+    console.log(book);
+    var xx=JSON.stringify(book);
+    IpoService.createIpo(xx).then(r => console.log("Success"));
 
   };
 
