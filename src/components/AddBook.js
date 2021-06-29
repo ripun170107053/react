@@ -39,7 +39,7 @@ const AddBook = ({ history }) => {
       ppp+=pp[i];
     }
     book.openDateTime=ppp;
-    console.log(book);
+    console.log(JSON.stringify(book));
     var xx=JSON.stringify(book);
     IpoService.createIpo(xx).then(r => console.log("Success"));
 
