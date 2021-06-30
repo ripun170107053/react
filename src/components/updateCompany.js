@@ -86,7 +86,7 @@ import axios from 'axios';
     
         const myInit1  = 
         {
-          method: 'POST',
+          method: 'PUT',
           headers: { 
               'Content-Type': 'application/json; charset=UTF-8',
           'Access-Control-Allow-Origin' : '*',
@@ -108,25 +108,44 @@ import axios from 'axios';
         console.log(myInit1+"body")
         alert("Company created successfully");
         let finalurl = 'https://glacial-brook-60163.herokuapp.com/companies/add';
-        fetch(finalurl, myInit1)
-          .then((response) => 
-          {
-            this.setState({ companyName: '' });
-            this.setState({ turnover: '' });
-            this.setState({ ceo: '' });
-            this.setState({ boardDirector: '' });
-            this.setState({ stockExchange:''});
-            this.setState({ sector: '' });
-            this.setState({ writeup: '' });
-            this.setState({ companyCode: '' });
-            
-            return response.json();
-            
-          })
-          .then(function (myJson) {
-            console.log(myJson);
-          })
-          .catch((error) => console.error(error));
+        // fetch(finalurl, myInit1)
+        //   .then((response) =>
+        //   {
+        //     this.setState({ companyName: '' });
+        //     this.setState({ turnover: '' });
+        //     this.setState({ ceo: '' });
+        //     this.setState({ boardDirector: '' });
+        //     this.setState({ stockExchange:''});
+        //     this.setState({ sector: '' });
+        //     this.setState({ writeup: '' });
+        //     this.setState({ companyCode: '' });
+        //
+        //     return response.json();
+        //
+        //   })
+        //   .then(function (myJson) {
+        //     console.log(myJson);
+        //   })
+        //   .catch((error) => console.error(error));
+        axios.put(finalurl, myInit1)
+            .then((response) =>
+            {
+              this.setState({ companyName: '' });
+              this.setState({ turnover: '' });
+              this.setState({ ceo: '' });
+              this.setState({ boardDirector: '' });
+              this.setState({ stockExchange:''});
+              this.setState({ sector: '' });
+              this.setState({ writeup: '' });
+              this.setState({ companyCode: '' });
+
+              return response.json();
+
+            })
+            .then(function (myJson) {
+              console.log(myJson);
+            })
+            .catch((error) => console.error(error));
        
       }
   
