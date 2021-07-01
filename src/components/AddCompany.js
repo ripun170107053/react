@@ -3,7 +3,7 @@ import BookForm from './BookForm';
 import BooksContext from "../context/BooksContext";
 import { Redirect } from "react-router-dom";
 import companyService from "../services/companyService";
-import companyForm from "./CompanyForm";
+import CompanyForm from "./CompanyForm";
 const AddCompany = ({ history }) => {
   const { books, setBooks } = useContext(BooksContext);
 
@@ -48,7 +48,7 @@ const AddCompany = ({ history }) => {
 
   return (
     <React.Fragment>
-      <companyForm handleOnSubmit={handleOnSubmit} />
+      <CompanyForm handleOnSubmit={handleOnSubmit} />
     </React.Fragment>
   );
 };
