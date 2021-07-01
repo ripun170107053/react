@@ -17,6 +17,7 @@ import CC from "../components/CC";
 import IpoForm from "../components/IpoForm";
 import UpdateCompanyComponent from "../components/UpdateCompanyComponent";
 import CompanyForm from '../components/CompanyForm';
+import AddCompany from '../components/AddCompany';
 
 const AppRouter = () => {
   const [books, setBooks] = useLocalStorage('books', []);
@@ -35,7 +36,7 @@ const AppRouter = () => {
               {/*<Route exact path="/" exact component={UserLandingPage} />*/}
               <Route exact path="/uploadExcel" component={UploadFiles} />
               <Route exact path="/createNewUser" component={createNewUser} />
-              <Route exact path="/createCompany" component={CompanyForm} />
+              <Route exact path="/createCompany" component={AddCompany} />
               {/*/!* <Route exact path="/updateCompany" component={updateCompany} /> *!/*/}
               <Route exact path="/viewAllCompanies" component={Apps}/>
               <Route exact path="/listStockExchanges" component={getAllSE}/>
