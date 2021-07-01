@@ -9,7 +9,7 @@ const BooksList = () => {
 
   const handleRemoveBook = (companyCode) => {
     setBooks(books.filter((book) => book.companyCode !== companyCode));
-    companyService.deleteCompany(companyCode).then(r => console.log("delete success"));
+    companyService.deleteCompany(book.companyCode).then(r => console.log("delete success"));
   };
 
   return (

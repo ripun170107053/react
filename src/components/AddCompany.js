@@ -17,29 +17,29 @@ const AddCompany = ({ history }) => {
 
     var x= JSON.stringify(book);
 
-    var p = JSON.stringify(book.openDateTime);
-    var pp="";
-    for(var i =0;i<p.length;i++)
-    {
-      if(p[i]==='T' || p[i]==='Z')
-      {
+    // var p = JSON.stringify(book.openDateTime);
+    // var pp="";
+    // for(var i =0;i<p.length;i++)
+    // {
+    //   if(p[i]==='T' || p[i]==='Z')
+    //   {
 
-      }
-      else
-        pp+=p[i];
-    }
-    var ppp="";
-    for(var i=1;i<=10;i++)
-    {
-      ppp+=pp[i];
-    }
-    ppp+=' ';
+    //   }
+    //   else
+    //     pp+=p[i];
+    // }
+    // var ppp="";
+    // for(var i=1;i<=10;i++)
+    // {
+    //   ppp+=pp[i];
+    // }
+    // ppp+=' ';
 
-    for(var i=11;i<=18;i++)
-    {
-      ppp+=pp[i];
-    }
-    book.openDateTime=ppp;
+    // for(var i=11;i<=18;i++)
+    // {
+    //   ppp+=pp[i];
+    // }
+    // book.openDateTime=ppp;
     console.log(JSON.stringify(book));
     var xx=JSON.stringify(book);
     companyService.createCompany(book).then(r => console.log("Success"));
