@@ -4,7 +4,7 @@ import Book from './Book';
 import BooksContext from "../context/BooksContext";
 import IpoService from "../services/IpoService";
 import companyService from '../services/companyService';
-const BooksList = () => {
+const CompanyList = () => {
   const { books, setBooks } = useContext(BooksContext);
 
   const handleRemoveBook = (companyCode) => {
@@ -27,4 +27,4 @@ const BooksList = () => {
   );
 };
 
-export default BooksList;
+export default CompanyList;

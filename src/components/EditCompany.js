@@ -5,7 +5,7 @@ import BooksContext from "../context/BooksContext";
 import IpoService from "../services/IpoService";
 import companyService from '../services/companyService';
 import CompanyForm from './CompanyForm';
-const EditBook = ({ history }) => {
+const EditCompany = ({ history }) => {
   const { books, setBooks } = useContext(BooksContext);
   const { id } = useParams();
   const bookToEdit = books.find((book) => book.id === id);
@@ -51,4 +51,4 @@ const EditBook = ({ history }) => {
   );
 };
 
-export default EditBook;
+export default EditCompany;
