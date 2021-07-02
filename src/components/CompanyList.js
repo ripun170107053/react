@@ -1,23 +1,25 @@
 import React, { useContext } from 'react';
 import _ from 'lodash';
-import Book from './Book';
-import BooksContext from "../context/BooksContext";
+// import Company from './Company';
+// import CompanyContext from "../context/CompanyContext";
+import CompanyContext from '../context/CompanyContext';
 import IpoService from "../services/IpoService";
 import companyService from '../services/companyService';
+import Company from './Company'; 
 const CompanyList = () => {
-  const { books, setBooks } = useContext(BooksContext);
+  const { companies, setCompanies } = useContext(CompanyContext);
 
-  const handleRemoveBook = (companyCode) => {
-    setBooks(books.filter((book) => book.companyCode !== companyCode));
-    companyService.deleteCompany(book.companyCode).then(r => console.log("delete success"));
+  const handleRemoveCompany = (companyCode) => {
+    setCompanies(companies.filter((company) => company.companyCode !== companyCode));
+    companyService.deleteCompany(companyCode).then(r => console.log("delete success"));
   };
 
   return (
     <React.Fragment>
-      <div className="book-list">
-        {!_.isEmpty(books) ? (
-          books.map((book) => (
-            <Book key={book.companyCode} {...book} handleRemoveBook={handleRemoveBook} />
+      <div className="company-list">
+        {!_.isEmpty(companies) ? (
+          companies.map((company) => (
+            <Company key={company.companyCode} {...company} handleRemoveCompany={handleRemoveCompany} />
           ))
         ) : (
           <p className="message">No Companies available</p>

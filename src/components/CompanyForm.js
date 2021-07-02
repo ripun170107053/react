@@ -3,21 +3,21 @@ import { Form, Button } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 
 const CompanyForm = (props) => {
-    const [book, setBook] = useState(() => {
+    const [company, setCompany] = useState(() => {
         return {
-            companyCode:props.book? props.book.companyCode:'',
-            companyName: props.book ? props.book.companyName : '',
-            ceo: props.book ? props.book.ceo : '',
-            turnover: props.book ? props.book.turnover : '',
-            boardDirector: props.book ? props.book.boardDirector : '',
-            writeup: props.book ? props.book.writeup : '',
-            sector: props.book ? props.book.sector : '',
-            stockExchange: props.book ? props.book.stockExchange : '',
+            companyCode:props.company? props.company.companyCode:'',
+            companyName: props.company ? props.company.companyName : '',
+            ceo: props.company ? props.company.ceo : '',
+            turnover: props.company ? props.company.turnover : '',
+            boardDirector: props.company ? props.company.boardDirector : '',
+            writeup: props.company ? props.company.writeup : '',
+            sector: props.company ? props.company.sector : '',
+            stockExchange: props.company ? props.company.stockExchange : '',
         };
     });
 
     const [errorMsg, setErrorMsg] = useState('');
-    const {companyCode,companyName,ceo,turnover,boardDirector,writeup,sector,stockExchange} = book;
+    const {companyCode,companyName,ceo,turnover,boardDirector,writeup,sector,stockExchange} = company;
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
@@ -31,7 +31,7 @@ const CompanyForm = (props) => {
         // });
 
         if (allFieldsFilled) {
-            const book = {
+            const company = {
                 companyCode,
                 companyName,
                 ceo,
@@ -41,7 +41,7 @@ const CompanyForm = (props) => {
                 sector,
                 stockExchange,
             };
-            props.handleOnSubmit(book);
+            props.handleOnSubmit(company);
         } else {
             errorMsg = 'Please fill out all the fields.';
         }
@@ -53,7 +53,7 @@ const CompanyForm = (props) => {
         switch (name) {
             case 'quantity':
                 if (value === '' || parseInt(value) === +value) {
-                    setBook((prevState) => ({
+                    setCompany((prevState) => ({
                         ...prevState,
                         [name]: value
                     }));
@@ -61,14 +61,14 @@ const CompanyForm = (props) => {
                 break;
             case 'price':
                 if (value === '' || value.match(/^\d{1,}(\.\d{0,2})?$/)) {
-                    setBook((prevState) => ({
+                    setCompany((prevState) => ({
                         ...prevState,
                         [name]: value
                     }));
                 }
                 break;
             default:
-                setBook((prevState) => ({
+                setCompany((prevState) => ({
                     ...prevState,
                     [name]: value
                 }));

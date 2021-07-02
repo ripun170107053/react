@@ -1,23 +1,25 @@
 import React, { useContext } from 'react';
-import BookForm from './BookForm';
-import BooksContext from "../context/BooksContext";
+
+import CompanyContext from "../context/CompanyContext";
 import { Redirect } from "react-router-dom";
 import companyService from "../services/companyService";
-import CompanyForm from "./CompanyForm";
+import CompanyForm from './CompanyForm';
+
 const AddCompany = ({ history }) => {
-  const { books, setBooks } = useContext(BooksContext);
+  const { companies, setcompanies } = useContext(CompanyContext);
 
-  const handleOnSubmit = (book) => {
-    //console.log(JSON.stringify(book));
-    //book.id=5;
+  const handleOnSubmit = (company) => {
+    //console.log(JSON.stringify(company));
+    //company.id=5;
 
 
-    setBooks([book, ...books]);
+    setcompanies([company, ...companies]);
     history.push('/');
 
-    var x= JSON.stringify(book);
+    var x= JSON.stringify(company);
+   // console.log(companies);
 
-    // var p = JSON.stringify(book.openDateTime);
+    // var p = JSON.stringify(company.openDateTime);
     // var pp="";
     // for(var i =0;i<p.length;i++)
     // {
@@ -39,10 +41,10 @@ const AddCompany = ({ history }) => {
     // {
     //   ppp+=pp[i];
     // }
-    // book.openDateTime=ppp;
-    console.log(JSON.stringify(book));
-    var xx=JSON.stringify(book);
-    companyService.createCompany(book).then(r => console.log("Success"));
+    // company.openDateTime=ppp;
+    console.log(JSON.stringify(company));
+    var xx=JSON.stringify(company);
+    companyService.createCompany(company).then(r => console.log("Success"));
 
   };
 
