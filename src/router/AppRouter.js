@@ -21,9 +21,10 @@ import AddCompany from '../components/AddCompany';
 import CompanyList from '../components/CompanyList';
 import EditCompany from '../components/EditCompany';
 import CompanyContext from '../context/CompanyContext';
+import useLocalStorage2 from '../hooks/useLocalStorage2';
 const AppRouter = () => {
   const [books, setBooks] = useLocalStorage('books', []);
-  const [companies, setcompanies] = useLocalStorage('companies', []);
+  const [companies, setcompanies] = useLocalStorage2('companies', []);
 
   return (
     <BrowserRouter>
@@ -56,7 +57,7 @@ const AppRouter = () => {
               <Route component={AddBook} path="/addIPO" />
               <Route component={EditBook} path="/edit/:id" /> */}
               <Route component={CompanyList} path="/allC" exact={true} />
-              <Route component={EditCompany} path="/editC/:id" />
+              <Route component={EditCompany} path="/editC/:companyCode" />
               {/*<Route component={() => <Redirect to="/" />} />*/}
               {/*<Route exact path="/" exact component={UserLandingPage} />*/}
               {/* <Route exact path="/uploadExcel" component={UploadFiles} />

@@ -71,8 +71,8 @@ const AdminNavbar=()=>
                                 <DropdownItem ><Link to="/createCompany" >  Add a new Company </Link></DropdownItem>
                                 {/* <DropdownItem ><Link to="/updateCompany" > Update Existing Company </Link></DropdownItem> */}
                                 {/*//<DropdownItem ><Link to="/viewAllCompany" >  View All </Link></DropdownItem>*/}
-                                <DropdownItem ><Link to="/company/2/update" >  Update Company </Link></DropdownItem>
-                                <DropdownItem ><Link to="/viewAllCompanies" >  View All Companies </Link></DropdownItem>
+                                {/* <DropdownItem ><Link to="/allC" >  Update Company </Link></DropdownItem> */}
+                                <DropdownItem ><Link to="/allC" >  View All Companies and Update/Edit/Delete Them </Link></DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         </td>

@@ -7,10 +7,10 @@ import IpoService from "../services/IpoService";
 import companyService from '../services/companyService';
 import Company from './Company'; 
 const CompanyList = () => {
-  const { companies, setCompanies } = useContext(CompanyContext);
+  const { companies, setcompanies } = useContext(CompanyContext);
 
-  const handleRemoveCompany = (companyCode) => {
-    setCompanies(companies.filter((company) => company.companyCode !== companyCode));
+  const handleRemovecompany = (companyCode) => {
+    setcompanies(companies.filter((company) => company.companyCode !== companyCode));
     companyService.deleteCompany(companyCode).then(r => console.log("delete success"));
   };
 
@@ -19,7 +19,7 @@ const CompanyList = () => {
       <div className="company-list">
         {!_.isEmpty(companies) ? (
           companies.map((company) => (
-            <Company key={company.companyCode} {...company} handleRemoveCompany={handleRemoveCompany} />
+            <Company key={company.companyCode} {...company} handleRemovecompany={handleRemovecompany} />
           ))
         ) : (
           <p className="message">No Companies available</p>

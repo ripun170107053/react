@@ -20,7 +20,7 @@ const Company = ({
           <div>turnover: {turnover}</div>
           <div>stockExchange: {stockExchange}</div>
         </div>
-        <Button variant="primary" onClick={() => history.push(`/edit/${companyCode}`)}>
+        <Button variant="primary" onClick={() => history.push(`/editC/${companyCode}`)}>
           Edit
         </Button>{' '}
         <Button variant="danger" onClick={() => handleRemovecompany(companyCode)}>

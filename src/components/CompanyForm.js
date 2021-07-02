@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 const CompanyForm = (props) => {
     const [company, setCompany] = useState(() => {
         return {
+            
             companyCode:props.company? props.company.companyCode:'',
             companyName: props.company ? props.company.companyName : '',
             ceo: props.company ? props.company.ceo : '',
