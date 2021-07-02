@@ -17,8 +17,8 @@ class companyService {
         return axios.get(COMPANY_API_BASE_URL + 'findById/'+companyId);
     }
 
-    updateCompany(company){
-        return axios.put(COMPANY_API_BASE_URL + 'update', company);
+    updateCompany(company,companyId){
+        return axios.put(COMPANY_API_BASE_URL + 'update/'+companyId, company);
     }
 
     deleteCompany(companyId){

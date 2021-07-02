@@ -129,7 +129,7 @@ const CompanyForm = (props) => {
                     <Form.Label>boardDirector</Form.Label>
                     <Form.Control
                         className="input-control"
-                        type="number"
+                        type="text"
                         name="boardDirector"
                         value={boardDirector}
                         placeholder="Enter boardDirector"

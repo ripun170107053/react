@@ -20,7 +20,7 @@ const  EditCompany = ({ history }) => {
 
     var xx=JSON.stringify(company);
     console.log(xx);
-    companyService.updateCompany(company).then(r => console.log("Success"));
+    companyService.updateCompany(company,company.companyCode).then(r => console.log("Success"));
 
   };
 
