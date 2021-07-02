@@ -23,7 +23,7 @@ import EditCompany from '../components/EditCompany';
 import CompanyContext from '../context/CompanyContext';
 const AppRouter = () => {
   const [books, setBooks] = useLocalStorage('books', []);
-  const [companies, setCompanies] = useLocalStorage('companies', []);
+  const [companies, setcompanies] = useLocalStorage('companies', []);
 
   return (
     <BrowserRouter>
@@ -50,7 +50,7 @@ const AppRouter = () => {
               {/*<Route path = "/company/2/update" component = {UpdateCompanyComponent}/>*/}
             </Switch>
           </BooksContext.Provider>
-          <CompanyContext.Provider value={{ companies, setCompanies }}>
+          <CompanyContext.Provider value={{ companies, setcompanies }}>
             <Switch>
               {/* <Route component={BooksList} path="/allIPO" exact={true} />
               <Route component={AddBook} path="/addIPO" />
